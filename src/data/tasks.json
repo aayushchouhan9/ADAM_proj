@@ -1,0 +1,407 @@
+[
+  {
+    "id": "TASK-001",
+    "title": "Old Duplicate Task 1",
+    "description": "This should be discarded because it appears earlier.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "low",
+    "labels": ["bug"],
+    "due_date": "2026-06-10",
+    "estimate_hours": 3
+  },
+  {
+    "id": "TASK-001",
+    "title": "Clean Task 1",
+    "description": "This should be kept because it appears later.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "low",
+    "labels": ["bug"],
+    "due_date": "2026-06-10",
+    "estimate_hours": 3
+  },
+  {
+    "id": "TASK-002",
+    "title": "Task with Null Assignee",
+    "description": "Assignee is null, should be repaired to Unassigned.",
+    "status": "Backlog",
+    "assignee": null,
+    "priority": "med",
+    "labels": ["frontend"],
+    "due_date": "10/06/2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-003",
+    "title": "Task with Empty Assignee",
+    "description": "Assignee is empty string, should be repaired to Unassigned.",
+    "status": "In Progress",
+    "assignee": "",
+    "priority": "high",
+    "labels": ["api"],
+    "due_date": "June 5, 2026",
+    "estimate_hours": 8
+  },
+  {
+    "id": "TASK-004",
+    "title": "Task with N/A Assignee",
+    "description": "Assignee is N/A, should be repaired to Unassigned.",
+    "status": "Review",
+    "assignee": "N/A",
+    "priority": "low",
+    "labels": ["docs"],
+    "due_date": "2026-06-12",
+    "estimate_hours": "2"
+  },
+  {
+    "id": "TASK-005",
+    "title": "Old Duplicate Task 5",
+    "description": "This should be discarded.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "high",
+    "due_date": "2026-06-15",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-005",
+    "title": "Clean Task 5",
+    "description": "This should be kept.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "high",
+    "due_date": "2026-06-15",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-006",
+    "title": "Task with Negative Estimate",
+    "description": "Estimate is negative, should be repaired to 0.",
+    "status": "Done",
+    "assignee": "Charlie",
+    "priority": "med",
+    "due_date": "2026-06-01",
+    "estimate_hours": -5
+  },
+  {
+    "id": "TASK-007",
+    "title": "Task with Alpha Estimate",
+    "description": "Estimate is a non-numeric string, should be repaired to 0.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "low",
+    "due_date": "15/06/2026",
+    "estimate_hours": "abc"
+  },
+  {
+    "id": "TASK-008",
+    "title": "Task with Null Estimate",
+    "description": "Estimate is null, should be repaired to 0.",
+    "status": "In Progress",
+    "assignee": "Bob",
+    "priority": "high",
+    "due_date": "June 12, 2026",
+    "estimate_hours": null
+  },
+  {
+    "id": "TASK-009",
+    "title": "Task with Word Estimate",
+    "description": "Estimate is word, should be repaired to 0.",
+    "status": "Review",
+    "assignee": "Charlie",
+    "priority": "med",
+    "due_date": "2026-06-20",
+    "estimate_hours": "ten"
+  },
+  {
+    "id": "TASK-010",
+    "title": "Old Duplicate Task 10",
+    "description": "This should be discarded.",
+    "status": "Backlog",
+    "assignee": "Dave",
+    "priority": "low",
+    "due_date": "2026-06-25",
+    "estimate_hours": 6
+  },
+  {
+    "id": "TASK-010",
+    "title": "Clean Task 10",
+    "description": "This should be kept.",
+    "status": "Backlog",
+    "assignee": "Dave",
+    "priority": "low",
+    "due_date": "2026-06-25",
+    "estimate_hours": 6
+  },
+  {
+    "id": "TASK-011",
+    "title": "Task with Invalid Status 1",
+    "description": "Status is invalid, should be repaired to Backlog with warning flag.",
+    "status": "InvalidStatus",
+    "assignee": "Alice",
+    "priority": "med",
+    "due_date": "2026-06-18",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-012",
+    "title": "Task with Invalid Status 2",
+    "description": "Status is Unknown, should be repaired to Backlog with warning flag.",
+    "status": "Unknown",
+    "assignee": "Bob",
+    "priority": "high",
+    "due_date": "20/06/2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-013",
+    "title": "Task with Invalid Status 3",
+    "description": "Status is Random, should be repaired to Backlog with warning flag.",
+    "status": "Random",
+    "assignee": "Charlie",
+    "priority": "low",
+    "due_date": "June 18, 2026",
+    "estimate_hours": 2
+  },
+  {
+    "id": "TASK-014",
+    "title": "Task with Case-Insensitive Status 1",
+    "description": "Status is in lower case. Should be normalized silently to In Progress.",
+    "status": "in progress",
+    "assignee": "Dave",
+    "priority": "med",
+    "due_date": "2026-06-22",
+    "estimate_hours": 6
+  },
+  {
+    "id": "TASK-015",
+    "title": "Task with Case-Insensitive Status 2",
+    "description": "Status is in upper case. Should be normalized silently to Review.",
+    "status": "REVIEW",
+    "assignee": "Alice",
+    "priority": "high",
+    "due_date": "22/06/2026",
+    "estimate_hours": 8
+  },
+  {
+    "id": "TASK-016",
+    "title": "Standard Task 16",
+    "description": "Normal backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "low",
+    "due_date": "2026-06-30",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-017",
+    "title": "Standard Task 17",
+    "description": "Normal task in progress.",
+    "status": "In Progress",
+    "assignee": "Charlie",
+    "priority": "med",
+    "due_date": "June 25, 2026",
+    "estimate_hours": 6
+  },
+  {
+    "id": "TASK-018",
+    "title": "Standard Task 18",
+    "description": "Normal task in review.",
+    "status": "Review",
+    "assignee": "Dave",
+    "priority": "high",
+    "due_date": "2026-07-02",
+    "estimate_hours": 3
+  },
+  {
+    "id": "TASK-019",
+    "title": "Standard Task 19",
+    "description": "Normal completed task.",
+    "status": "Done",
+    "assignee": "Alice",
+    "priority": "low",
+    "due_date": "10/06/2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-020",
+    "title": "Standard Task 20",
+    "description": "Another backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "med",
+    "due_date": "2026-07-05",
+    "estimate_hours": 2
+  },
+  {
+    "id": "TASK-021",
+    "title": "Standard Task 21",
+    "description": "Another in progress task.",
+    "status": "In Progress",
+    "assignee": "Charlie",
+    "priority": "high",
+    "due_date": "05/07/2026",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-022",
+    "title": "Standard Task 22",
+    "description": "Another review task.",
+    "status": "Review",
+    "assignee": "Dave",
+    "priority": "low",
+    "due_date": "June 30, 2026",
+    "estimate_hours": 1
+  },
+  {
+    "id": "TASK-023",
+    "title": "Standard Task 23",
+    "description": "Another completed task.",
+    "status": "Done",
+    "assignee": "Alice",
+    "priority": "med",
+    "due_date": "2026-07-01",
+    "estimate_hours": 8
+  },
+  {
+    "id": "TASK-024",
+    "title": "Standard Task 24",
+    "description": "Third backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "high",
+    "due_date": "2026-07-10",
+    "estimate_hours": 3
+  },
+  {
+    "id": "TASK-025",
+    "title": "Standard Task 25",
+    "description": "Third in progress task.",
+    "status": "In Progress",
+    "assignee": "Charlie",
+    "priority": "low",
+    "due_date": "10/07/2026",
+    "estimate_hours": 6
+  },
+  {
+    "id": "TASK-026",
+    "title": "Standard Task 26",
+    "description": "Third completed task.",
+    "status": "Done",
+    "assignee": "Dave",
+    "priority": "med",
+    "due_date": "2026-07-03",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-027",
+    "title": "Standard Task 27",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "high",
+    "due_date": "July 5, 2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-028",
+    "title": "Standard Task 28",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "low",
+    "due_date": "2026-07-15",
+    "estimate_hours": 2
+  },
+  {
+    "id": "TASK-029",
+    "title": "Standard Task 29",
+    "description": "Completed task.",
+    "status": "Done",
+    "assignee": "Charlie",
+    "priority": "med",
+    "due_date": "15/07/2026",
+    "estimate_hours": 7
+  },
+  {
+    "id": "TASK-030",
+    "title": "Standard Task 30",
+    "description": "Completed task.",
+    "status": "Done",
+    "assignee": "Dave",
+    "priority": "high",
+    "due_date": "July 10, 2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-031",
+    "title": "Standard Task 31",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "low",
+    "due_date": "2026-07-20",
+    "estimate_hours": 3
+  },
+  {
+    "id": "TASK-032",
+    "title": "Standard Task 32",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "med",
+    "due_date": "22/07/2026",
+    "estimate_hours": 6
+  },
+  {
+    "id": "TASK-033",
+    "title": "Standard Task 33",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Charlie",
+    "priority": "high",
+    "due_date": "July 20, 2026",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-034",
+    "title": "Standard Task 34",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Dave",
+    "priority": "low",
+    "due_date": "2026-07-25",
+    "estimate_hours": 2
+  },
+  {
+    "id": "TASK-035",
+    "title": "Standard Task 35",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "med",
+    "due_date": "25/07/2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-036",
+    "title": "Standard Task 36",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "high",
+    "due_date": "July 25, 2026",
+    "estimate_hours": 8
+  },
+  {
+    "id": "TASK-037",
+    "title": "Standard Task 37",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Charlie",
+    "priority": "low",
+    "due_date": "2026-07-30",
+    "estimate_hours": 1
+  }
+]
